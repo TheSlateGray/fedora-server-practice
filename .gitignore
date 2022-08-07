@@ -1,0 +1,21 @@
+### Ansible ###
+*.retry
+*.original
+*.tmp
+*.bkp
+
+# Exclude all binaries
+*.bin
+*.jar
+*.tar
+*.zip
+*.gzip
+*.tgz
+
+#
+.vscode/*
+.history/
+.vagrant/
+.ansible
+.cache
+.venv
