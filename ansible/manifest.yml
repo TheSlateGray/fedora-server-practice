@@ -1,0 +1,6 @@
+---
+# ansible/manifest.yml
+
+system:
+  hostname: "fhs.local"
+  timezone: "America/Chicago"
