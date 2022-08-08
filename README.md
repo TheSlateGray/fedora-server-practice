@@ -66,10 +66,10 @@ To apply the playbook:
 
 ```bash
 # Run the playbook (dry-run)
-$ ansible-playbook -i IP_ADDRESS, --check --diff ansible/playbooks/configure.yml
+$ ansible-playbook -u admin -K -i IP_ADDRESS, --check --diff ansible/playbooks/configure.yml
 
 # Run the playbook (for real)
-$ ansible-playbook -i IP_ADDRESS, ansible/playbooks/configure.yml
+$ ansible-playbook -u admin -K -i IP_ADDRESS, ansible/playbooks/configure.yml
 ```
 
 ### Update
@@ -83,10 +83,10 @@ To appl the playbook:
 
 ```bash
 # Run the playbook (dry-run)
-$ ansible-playbook -i IP_ADDRESS, --check ansible/playbooks/update.yml
+$ ansible-playbook -u admin -K -i IP_ADDRESS, --check ansible/playbooks/update.yml
 
 # Run the playbook (for real)
-$ ansible-playbook -i IP_ADDRESS, ansible/playbooks/update.yml
+$ ansible-playbook -u admin -K -i IP_ADDRESS, ansible/playbooks/update.yml
 ```
 
 ### VM Creation
@@ -96,7 +96,7 @@ Virtual Maschines. It will prompt you for some information and create the VM.
 
 ```bash
 # Create a VM
-$ ansible-playbook -i IP_ADDRESS, ansible/playbooks/create_vm.yml
+$ ansible-playbook -u admin -K -i IP_ADDRESS, ansible/playbooks/create_vm.yml
 ```
 
 Afterwards, you will be able to log in to the new machine.
