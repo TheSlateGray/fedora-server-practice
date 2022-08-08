@@ -39,6 +39,17 @@ In the future this will could be changed to run from an inventory file.
 
 ### Configuration
 
+Before configuring with Ansible ssh keys need to be copied to the new server.
+
+```bash
+# Copy public rsa key to created admin account.
+ssh-copy-id -i ~/.ssh/id_rsa.pub admin@IP_ADDRESS
+# The server will promt for the preconfigured password.
+# Verify key copy worked.
+ssh admin@IP_ADDRESS
+exit
+```
+
 The [Ansible Playbook "configure.yml"](./ansible/playbooks/configure.yml) will:
 
 - Configure the hostname and timezone
