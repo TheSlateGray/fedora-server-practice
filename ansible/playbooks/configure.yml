@@ -61,6 +61,7 @@
           - "curl"
           - "wget"
           - "vim"
+          - "htop"
         state: "present"
       become: true
 
