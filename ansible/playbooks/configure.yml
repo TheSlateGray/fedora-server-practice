@@ -76,12 +76,11 @@
         state: "present"
       become: true
 
-    # - name: "Manage SELinux Configuration"
-    # "ModuleNotFoundError: No module named 'selinux' fatal:"
-    #   ansible.posix.selinux:
-    #     policy: "targeted"
-    #     state: "enforcing"
-    #   become: true
+    - name: "Manage SELinux Configuration"
+      ansible.posix.selinux:
+        policy: "targeted"
+        state: "enforcing"
+      become: true
 
     # Firewall
     - name: "Manage firewalld Packages"
