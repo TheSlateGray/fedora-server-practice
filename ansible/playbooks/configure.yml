@@ -290,6 +290,13 @@
         persistent: true
       become: true
 
+    - name: "Allow privileged containers"
+      ansible.posix.seboolean:
+        name: "container_manage_cgroup"
+        state: true
+        persistent: true
+      become: true
+
     - name: "Manage podman Socket"
       ansible.builtin.service:
         name: "podman.socket"
