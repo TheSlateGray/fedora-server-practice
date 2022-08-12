@@ -32,6 +32,15 @@ Starting an installation via Kickstart is pretty easy:
 4. Continue and the installer will do its work.
 5. Wait until the system is rebooted and login with the preconfigured credentials.
 
+### Kickstart testing
+
+For testing a kickstart file it can be hosted quickly locally and pulled from the VM Host:
+```
+cp -r ./kickstart/kickstart.cfg /tmp/kickstart/kickstart.cfg
+python -m http.server --directory /tmp/kickstart/
+```
+Then use `inst.ks=http://HOST_IP:8000/kickstart.cfg`
+
 ### Customization
 
 Instead of providing and maintaining an inventory, this uses a [manifest.yml](./ansible/manifest.yml).
