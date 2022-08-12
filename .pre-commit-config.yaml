@@ -16,9 +16,9 @@ repos:
       - id: check-toml
       - id: check-xml
       - id: debug-statements
-      - id: detect-aws-credentials
-        args:
-          - --allow-missing-credentials
+      # - id: detect-aws-credentials
+      #   args:
+      #     - --allow-missing-credentials
       - id: detect-private-key
       - id: end-of-file-fixer
         exclude: files/(issue|motd)
@@ -36,12 +36,12 @@ repos:
   #   rev: v2.6.1
   #   hooks:
   #     - id: prettier
-  - repo: https://github.com/adrienverge/yamllint
-    rev: v1.27.1
-    hooks:
-      - id: yamllint
-        args:
-          - --strict
+  # - repo: https://github.com/adrienverge/yamllint
+  #   rev: v1.27.1
+  #   hooks:
+  #     - id: yamllint
+  #       args:
+  #         - --strict
 
   # pre-commit hooks
   - repo: https://github.com/pre-commit/pre-commit

@@ -1,0 +1,19 @@
+---
+# ansible/playbooks/add-rpm-fusion.yml
+
+- name: "Install the rpmfusion repos"
+  hosts: "all"
+
+  vars_files:
+    - "../manifest.yml"
+
+  tasks:
+    - name: "Install the rpmfusion repos"
+      ansible.builtin.dnf:
+        state: present
+        disable_gpg_check: true
+        name:
+          - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_facts.distribution_version }}.noarch.rpm
+          - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_facts.distribution_version }}.noarch.rpm
+      become: true
+      tags: rpmfusion
