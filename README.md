@@ -13,7 +13,7 @@ Kickstart and Ansible setup of a Fedora Server install.
 
 ## Motivation
 
-My home server has grown and expanded over the last few years from Ubuntu to Debian and then stablizing with OMV last year. OMV is a good home server OS, however I would like to standardize my configuration with code rather than rely on remember changes made in the GUI. I found the great [blog series](https://blog.while-true-do.io/fedora-home-server-intro-concept/) published by while-true-do and decided to adapt it to my needs.
+My home server has grown and expanded over the last few years from Ubuntu to Debian and then stablizing with OMV last year. OMV is a good home server OS, however I would like to standardize my configuration with code rather than rely on remembering changes made in the GUI. I found the great [blog series](https://blog.while-true-do.io/fedora-home-server-intro-concept/) published by while-true-do and decided to adapt it to my needs.
 
 ## Description
 
@@ -88,7 +88,7 @@ The [Ansible Playbook "update.yml"](./ansible/playbooks/update.yml) will:
 - Update the system
 - Reboot if necessary
 
-To appl the playbook:
+To apply the playbook:
 
 ```bash
 # Run the playbook (dry-run)
